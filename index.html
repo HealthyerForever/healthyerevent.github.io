@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy New Year</title>
+    <link rel="icon" href="./image/wisdowmfalling.png" type="image/x-icon">
+    <style>
+        .main-container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .main-container::before {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-size: 100% 100%;
+            background-image: url("./image/background.png");
+            filter: blur(3vw);
+            z-index: -1;
+        }
+
+        .main-container .spring-scoll1 {
+            position: absolute;
+            top: 5vh;
+            left: 28vw;
+            width: 40vw;
+            height: 12vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url("./image/横联.png");
+            background-size: 100% 100%;
+            z-index: 999;
+            animation: heng 2s ease forwards;
+        }
+
+        .main-container .spring-scoll1 .heng {
+            position: relative;
+            font-size: 5.4vh;
+            font-family: '华文行楷';
+            color: rgb(255, 255, 255);
+            filter: drop-shadow(0vw 0vw 5vw #ff1919);
+            opacity: 0;
+            transition: 1s;
+            cursor: default;
+        }
+
+        .main-container .spring-scoll2 {
+            position: absolute;
+            top: 20vh;
+            left: 5vw;
+            width: 20vw;
+            height: 70vh;
+            background-image: url("./image/春联.png");
+            background-size: 100% 100%;
+            z-index: 999;
+            animation: up 2s ease forwards;
+        }
+
+        .main-container .spring-scoll2 .up{
+            margin: 3vh 0 0 5.5vw;
+            position: relative;
+            width: 60%;
+            height: 100%;
+            font-size: 5.4vh;
+            font-family: '华文行楷';
+            color: rgb(255, 255, 255);
+            filter: drop-shadow(0vw 0vw 5vw #ff1919);
+            opacity: 0;
+            transition: 1s;
+            cursor: default;
+        }
+
+        .main-container .spring-scoll3 {
+            position: absolute;
+            top: 20vh;
+            left: 70vw;
+            width: 20vw;
+            height: 70vh;
+            background-image: url("./image/春联.png");
+            background-size: 100% 100%;
+            z-index: 999;
+            animation: down 2s ease forwards;
+        }
+
+        .main-container .spring-scoll3 .down{
+            margin: 3vh 0 0 5.5vw;
+            position: relative;
+            width: 60%;
+            height: 100%;
+            font-size: 5.4vh;
+            font-family: '华文行楷';
+            color: rgb(255, 255, 255);
+            filter: drop-shadow(0vw 0vw 5vw #ff1919);
+            opacity: 0;
+            transition: 1s;
+            cursor: default;
+        }
+
+        .title {
+            position: absolute;
+            top: 28vh;
+            left: 27vw;
+            width: 42vw;
+            height: 42vw;
+            background-image: url("./image/蛇年大吉.png");
+            background-size: 100% 100%;
+            filter: drop-shadow(0vw 0vw 2vw #ab3030);
+            z-index: 999;
+        }
+
+        .two {
+            position: absolute;
+            top: 60vh;
+            left: 25vw;
+            width: 40vw;
+            height: 34vw;
+            background-image: url("./image/wisdowmfalling.png");
+            background-size: 100% 100%;
+            z-index: 999;
+        }
+
+        .shiba {
+            position: absolute;
+            top: 80vh;
+            left: 25vw;
+            width: 17vw;
+            height: 20vw;
+            background-image: url("./image/shiba.png");
+            background-size: 100% 100%;
+            z-index: 999;
+        }
+
+        .ballball {
+            position: absolute;
+            top: 80vh;
+            left: 55vw;
+            width: 30vw;
+            height: 26vw;
+            background-image: url("./image/ballball.png");
+            background-size: 100% 100%;
+            z-index: 999;
+        }
+
+        @keyframes heng{
+            0% {
+                transform: translateY(-20vh);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes up{
+            0% {
+                transform: translateX(-25vw);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes down{
+            0% {
+                transform: translateX(25vw);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        .cursor {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 6vh;
+            height: 6vh;
+            background-image: url("./image/鞭炮.png");
+            background-size: 100% 100%;
+            z-index: 999;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="spring-scoll1">
+            <div class="heng">
+                三人一狗
+            </div>
+        </div>
+        <div class="spring-scoll2">
+            <div class="up">
+                智慧盈门 三友聚首春意闹
+            </div>
+        </div>
+        <div class="spring-scoll3">
+            <div class="down">
+                福气降临 四季同欢岁华新
+            </div>
+        </div>
+        <div class="title"></div>
+        <div class="two"></div>
+        <div class="shiba"></div>
+        <div class="ballball"></div>
+        <div class="cursor"></div>
+    </div>
+</body>
+<script>
+    let scroll1 = document.querySelector('.spring-scoll1');
+    let scroll2 = document.querySelector('.spring-scoll2');
+    let scroll3 = document.querySelector('.spring-scoll3');
+
+    let heng = document.querySelector('.heng');
+    let up = document.querySelector('.up');
+    let down = document.querySelector('.down');
+    let cursor = document.querySelector('.cursor');
+
+    scroll1.addEventListener('click', function(){
+        heng.style.opacity = 1;
+        heng.style.animation = "heng 1.4s ease forwards";
+    })
+
+    scroll2.addEventListener('click', function(){
+        up.style.opacity = 1;
+        up.style.animation = "up 1.4s ease forwards";
+    })
+
+    scroll3.addEventListener('click', function(){
+        down.style.opacity = 1;
+        down.style.animation = "down 1.4s ease forwards";
+    })
+
+    document.addEventListener('mousemove', function(e) {
+        let x = e.pageX;
+        let y = e.pageY;
+
+        cursor.style.left = x + 'px';
+        cursor.style.top = y + 'px';
+    })
+</script>
+</html>
